@@ -1,0 +1,148 @@
+# 多媒體程式設計學習目標
+
+```python
+class MultimediaGoals:
+    def __init__(self):
+        self.goals = []
+    
+    def add(self, category, title, level):
+        self.goals.append({'category': category, 'title': title, 'level': level})
+    
+    def show(self):
+        categories = {}
+        for g in self.goals:
+            if g['category'] not in categories:
+                categories[g['category']] = []
+            categories[g['category']].append(g)
+        
+        print("=" * 50)
+        print("多媒體程式設計學習目標")
+        print("=" * 50)
+        for cat in sorted(categories.keys()):
+            print(f"\n【{cat}】")
+            for i, g in enumerate(categories[cat], 1):
+                print(f"  {i}. {g['title']} ({g['level']})")
+
+# 初始化目標
+goals = MultimediaGoals()
+
+# 基礎概念
+goals.add('基礎概念', '數位媒體基礎', '初級')
+goals.add('基礎概念', '音訊基礎', '初級')
+goals.add('基礎概念', '視訊基礎', '初級')
+
+# 圖形影像
+goals.add('圖形影像', 'PIL/Pillow 影像處理', '初級')
+goals.add('圖形影像', 'OpenCV 應用', '中級')
+goals.add('圖形影像', 'OpenGL 3D 繪製', '進階')
+
+# 音訊處理
+goals.add('音訊處理', '音訊數位化', '初級')
+goals.add('音訊處理', '音訊特徵提取', '中級')
+goals.add('音訊處理', 'DSP 與合成', '進階')
+
+# 視訊處理
+goals.add('視訊處理', '視訊讀寫', '初級')
+goals.add('視訊處理', '視訊分析與追蹤', '中級')
+goals.add('視訊處理', '視訊編碼壓縮', '進階')
+
+# Web 多媒體
+goals.add('Web 多媒體', 'HTML5 多媒體', '初級')
+goals.add('Web 多媒體', 'WebGL 3D', '中級')
+goals.add('Web 多媒體', 'WebAudio API', '中級')
+
+# 實習項目
+goals.add('實習項目', '圖片濾鏡應用', '初級')
+goals.add('實習項目', '人臉檢測系統', '中級')
+goals.add('實習項目', '視訊編輯器', '進階')
+
+goals.show()
+```
+
+## 學習計畫
+
+```python
+plan = [
+    ("第一階段: 基礎理論", 4, [
+        "數位多媒體基本概念",
+        "影像、音訊、視訊基礎",
+        "常見格式與編解碼器"
+    ]),
+    ("第二階段: 圖形影像", 6, [
+        "PIL/Pillow 與 OpenCV",
+        "特徵提取與識別",
+        "圖片濾鏡應用"
+    ]),
+    ("第三階段: 音訊與視訊", 6, [
+        "音訊採集與分析",
+        "視訊讀寫與追蹤",
+        "人臉檢測系統"
+    ]),
+    ("第四階段: 進階應用", 6, [
+        "Web 多媒體 (HTML5/WebGL)",
+        "實時處理系統",
+        "完整項目開發"
+    ])
+]
+
+print("\n多媒體程式設計學習計畫")
+print("-" * 50)
+for phase, weeks, objs in plan:
+    print(f"\n{phase} ({weeks} 週)")
+    for obj in objs:
+        print(f"  • {obj}")
+```
+
+## 技能評估
+
+```python
+skills = {
+    "Python 編程": 0,
+    "影像處理": 0,
+    "音訊處理": 0,
+    "視訊處理": 0,
+    "OpenCV": 0,
+    "Web 多媒體": 0,
+    "3D 圖形": 0,
+    "FFmpeg": 0,
+    "DSP": 0,
+    "多媒體框架": 0
+}
+
+print("\n技能評估 (0-5 級)")
+print("-" * 50)
+for skill, level in sorted(skills.items()):
+    bar = "█" * level + "░" * (5 - level)
+    print(f"{skill:15} [{bar}]")
+```
+
+## 學習資源
+
+```python
+resources = {
+    "教科書": [
+        "《數位多媒體基礎》",
+        "《OpenCV 計算機視覺》",
+        "《音訊信號處理》"
+    ],
+    "開源工具": [
+        "OpenCV - 電腦視覺",
+        "FFmpeg - 多媒體框架",
+        "Audacity - 音訊編輯",
+        "Blender - 3D 建模"
+    ],
+    "編程庫": [
+        "PIL/Pillow",
+        "Librosa",
+        "MoviePy",
+        "PyOpenGL"
+    ]
+}
+
+print("\n學習資源")
+print("-" * 50)
+for cat, items in resources.items():
+    print(f"\n{cat}:")
+    for item in items:
+        print(f"  • {item}")
+```
